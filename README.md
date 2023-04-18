@@ -34,6 +34,8 @@ $ npm install
 
 ## Running the app
 
+Rename `.env.example` to `.env` and fill in the values.
+
 ```bash
 # development
 $ docker compose up
