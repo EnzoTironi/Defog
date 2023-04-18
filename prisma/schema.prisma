@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Flight {
+  id      Int      @id @default(autoincrement())
+  from    String
+  to      String
+  date    DateTime
+  airline String
+}
