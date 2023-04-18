@@ -40,6 +40,7 @@ export class FlightsService {
         await this.createChunk(chunk);
       }
       console.log(`Finished processing ${results.length} flights`);
+      fs.unlinkSync(file.path);
     });
 
     stream.on('error', this.handleError);
